@@ -2,32 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+	font-family: 'BERNIER';
+	src: url('../../public/font/Bernier.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		local('Montserrat-Light'),
+		url('../../public/font/Montserrat-Light.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	margin: 0;
+	display: flex;
+	background: #141313;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::-webkit-scrollbar {
+	width: 0vw;
+	height: 1vw;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	filter: drop-shadow(0 0 15px #f0cc57) drop-shadow(0 0 20px #f0cc57);
+}
+
+.nav-item:nth-child(1) {
+	background: url(../../public/img/bg-menu-1.webp) no-repeat 0% / cover;
+}
+
+.nav-item:nth-child(2) {
+	background: url(../../public/img/bg-menu-2.webp) no-repeat 0% / cover;
+}
+
+.nav-item:nth-child(3) {
+	background: url(../../public/img/bg-menu-3.webp) no-repeat 0% / cover;
+}
+
+.nav-item:nth-child(4) {
+	background: url(../../public/img/bg-menu-4.webp) no-repeat 0% / cover;
+}
+
+.nav-item:nth-child(5) {
+	background: url(../../public/img/bg-menu-5.webp) no-repeat 0% / cover;
+}
+
+.bernier {
+	font-family: 'BERNIER';
+}
+
+.mont {
+	font-family: 'Montserrat';
+}
+
+.text-gold {
+	color: #f0cc57;
+}
+
+.border-gold {
+	border-color: #f0cc57;
+}
+
+.bg-gold {
+	background-color: #f0cc57;
 }
